@@ -90,43 +90,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
-static const char *colorname[] = {
-	/* 8 normal colors */
-	"#646e5b", /* black   */
-	"#db7464", /* red     */
-	"#a7e160", /* green   */
-	"#dbd560", /* yellow  */
-	"#69b2d6", /* blue    */
-	"#a073d6", /* magenta */
-	"#69e1d3", /* cyan    */
-	"#9ea894", /* white   */
-
-	/* 8 bright colors */
-	"#88927e", /* black   */
-	"#dba08f", /* red     */
-	"#bde18b", /* green   */
-	"#dbda8b", /* yellow  */
-	"#95a9d6", /* blue    */
-	"#b59fd6", /* magenta */
-	"#95e1d2", /* cyan    */
-	"#c9d0c2", /* white   */
-
-	/* special colors */
-	[256] = "#000000", /* background */
-	[257] = "#ffffff", /* foreground */
-};
-
-static unsigned int defaultitalic = 7;
-static unsigned int defaultunderline = 7;
-
-/*
- * Default colors (colorname index)
- * foreground, background, cursor, reverse cursor
- */
-unsigned int defaultfg = 257;
-unsigned int defaultbg = 256;
-static unsigned int defaultcs = 257;
-static unsigned int defaultrcs = 256;
+#include "/home/ladyscream/.cache/wal/colors-wal-st.h"
 
 /*
  * Default shape of cursor
