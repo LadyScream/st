@@ -8,7 +8,7 @@
 static char *font = "Fira Mono:size=11:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
-	"mononoki Nerd Font Mono:size=16:antialias=false:autohint=true"
+	"FuraMono Nerd Font Mono:size=16:antialias=false:autohint=true"
 /*	"Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true", */
 /*	"Hack Nerd Font Mono:pixelsize=11:antialias=true:autohint=true", */
 };
@@ -90,7 +90,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
-#include "/home/ladyscream/.cache/wal/colors-wal-st.h"
+#include "/home/marea/.cache/wal/colors-wal-st.h"
 
 /*
  * Default shape of cursor
@@ -276,7 +276,7 @@ static Key key[] = {
 	{ XK_KP_Delete,     ShiftMask,      "\033[2K",      -1,    0},
 	{ XK_KP_Delete,     ShiftMask,      "\033[3;2~",    +1,    0},
 	{ XK_KP_Delete,     XK_ANY_MOD,     "\033[P",       -1,    0},
-	{ XK_KP_Delete,     XK_ANY_MOD,     "\177",         +1,    0},
+	{ XK_KP_Delete,     XK_ANY_MOD,     "\033[3~",      +1,    0},
 	{ XK_KP_Multiply,   XK_ANY_MOD,     "\033Oj",       +2,    0},
 	{ XK_KP_Add,        XK_ANY_MOD,     "\033Ok",       +2,    0},
 	{ XK_KP_Enter,      XK_ANY_MOD,     "\033OM",       +2,    0},
@@ -344,7 +344,8 @@ static Key key[] = {
 	{ XK_Delete,        ShiftMask,      "\033[2K",      -1,    0},
 	{ XK_Delete,        ShiftMask,      "\033[3;2~",    +1,    0},
 	{ XK_Delete,        XK_ANY_MOD,     "\033[P",       -1,    0},
-	{ XK_Delete,        XK_ANY_MOD,     "\177",         +1,    0},
+	{ XK_Delete,        XK_ANY_MOD,     "\033[3~",      +1,    0},
+	{ XK_BackSpace,     XK_NO_MOD,      "\177",          0,    0},
 	{ XK_BackSpace,     Mod1Mask,       "\033\177",      0,    0},
 	{ XK_Home,          ShiftMask,      "\033[2J",       0,   -1},
 	{ XK_Home,          ShiftMask,      "\033[1;2H",     0,   +1},
